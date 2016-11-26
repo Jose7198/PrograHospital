@@ -48,7 +48,7 @@ public class Direccion {
         this.secundaria="Quito";
         this.numero="E11-253";
     }
-    public Direccion(String principal,String secundaria,String numero){
+    public void setDireccion(String principal,String secundaria,String numero){
         this.principal=principal;
         this.secundaria=secundaria;
         this.numero=numero;
