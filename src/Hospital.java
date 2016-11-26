@@ -51,9 +51,7 @@ public class Hospital {
         this.nombre=nombre;
         this.calificacion=calificacion;
         this.capacidad=capacidad;
-        this.direccion.setPrincipal(principal);
-        this.direccion.setSecundaria(secundaria);
-        this.direccion.setNumero(numero);
+        this.direccion.setDireccion(principal,secundaria,numero);
     }
     
     public Hospital(){
