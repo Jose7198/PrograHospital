@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package sistemahospitalario;
 
 /**
  *
- * @author USER
+ * @author JoseLuis
  */
 public class Hospital {
     private String nombre;
+    private int capacidad;
     private String calificacion;
     private Direccion direccion;
-    private int capacidad;
 
     public String getNombre() {
         return nombre;
@@ -20,6 +21,14 @@ public class Hospital {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
 
     public String getCalificacion() {
@@ -37,13 +46,20 @@ public class Hospital {
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
-
-    public int getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
+    
+    public void setHospital(String nombre,String calificacion,int capacidad,String principal,String secundaria,String numero){
+        this.nombre=nombre;
+        this.calificacion=calificacion;
+        this.capacidad=capacidad;
+        this.direccion.setPrincipal(principal);
+        this.direccion.setSecundaria(secundaria);
+        this.direccion.setNumero(numero);
     }
     
+    public Hospital(){
+        this.nombre="Hospital de la Escuela Politécnica Nacional";
+        this.capacidad=50;
+        this.calificacion="A+";
+        this.direccion=new Direccion();
+    }
 }
